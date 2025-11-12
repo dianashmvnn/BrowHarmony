@@ -781,3 +781,70 @@ nav ul li a {
         display: block !important; /* Важно для мобильных */
     }
 }
+/* Feedback Form Section */
+.feedback-section {
+  padding: 60px 0;
+  background-color: #fff5f7;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  margin: 40px 0;
+}
+
+.feedback-section h2 {
+  color: #ff69b4;
+  margin-bottom: 30px;
+  font-size: 2em;
+}
+
+.feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.feedback-form .form-group {
+  margin-bottom: 20px;
+}
+
+.feedback-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 500;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.feedback-form button {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.feedback-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255,105,180,0.3);
+}
+
+.form-status {
+  margin-top: 15px;
+  color: #555;
+  text-align: center;
+  font-size: 15px;
+}
+
