@@ -60,6 +60,28 @@
     <!-- Подключение внешних ресурсов -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили для центрирования CRM формы */
+        .crm-form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            padding: 20px;
+        }
+        
+        .crm-form-wrapper {
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        .crm-form-title {
+            margin-bottom: 20px;
+            color: #ff69b4;
+            font-size: 24px;
+        }
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -134,6 +156,16 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Центрированная CRM форма -->
+            <div class="crm-form-container">
+                <div class="crm-form-wrapper">
+                    <h2 class="crm-form-title">Записаться на консультацию</h2>
+                    <!-- Обновленный код CRM формы -->
+                    <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1629026",hash:"242a5dce9d8a460230c55d06b136740c",locale:"ru"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script>
+                    <script id="amoforms_script_1629026" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1762976899"></script>
                 </div>
             </div>
             
@@ -217,28 +249,6 @@
                     </div>
                 </div>
             </div>
-            <!-- Feedback Form -->
-            <section id="feedback" class="feedback-section">
-              <div class="container">
-                <h2>Оставьте заявку или отзыв</h2>
-                <form action="https://formspree.io/f/xblqljyz" method="POST" class="feedback-form">
-                  <div class="form-group">
-                    <label for="name">Имя</label>
-                    <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required placeholder="Введите ваш email">
-                  </div>
-                  <div class="form-group">
-                    <label for="message">Сообщение</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Ваше сообщение..."></textarea>
-                  </div>
-                  <button type="submit" class="submit-btn">Отправить</button>
-                  <p class="form-status" id="formStatus"></p>
-                </form>
-              </div>
-            </section>
 
             <div class="copyright">
                 <p>&copy; 2025 Салон красоты "BrowHarmony". Все права защищены.</p>
@@ -293,29 +303,5 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
     <script src="//code.jivo.ru/widget/punQXglPvk" async></script>
-    <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1626934",hash:"7fa017cd18d24130cb1fc40fc3004cbb",locale:"ru"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script>
-    <script id="amoforms_script_1626934" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1762712699"></script>
-    <script>
-        document.querySelector('.feedback-form').addEventListener('submit', async function(e) {
-          e.preventDefault();
-          const form = e.target;
-          const formStatus = document.getElementById('formStatus');
-        
-          const data = new FormData(form);
-          const response = await fetch(form.action, {
-            method: form.method,
-            body: data,
-            headers: { 'Accept': 'application/json' }
-          });
-        
-          if (response.ok) {
-            formStatus.textContent = "Спасибо! Ваше сообщение успешно отправлено.";
-            form.reset();
-          } else {
-            formStatus.textContent = "Ошибка при отправке. Попробуйте позже.";
-          }
-        });
-    </script>
-
 </body>
 </html>
