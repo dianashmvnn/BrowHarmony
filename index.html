@@ -210,7 +210,7 @@
             <section id="feedback" class="feedback-section">
               <div class="container">
                 <h2>Оставьте заявку или отзыв</h2>
-                <form action="send.php" method="POST" class="feedback-form">
+                <form action="https://formspree.io/f/xblqljyz" method="POST" class="feedback-form">
                   <div class="form-group">
                     <label for="name">Имя</label>
                     <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
@@ -284,5 +284,27 @@
     <script src="//code.jivo.ru/widget/punQXglPvk" async></script>
     <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1626934",hash:"7fa017cd18d24130cb1fc40fc3004cbb",locale:"ru"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script>
     <script id="amoforms_script_1626934" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1762712699"></script>
+    <script>
+        document.querySelector('.feedback-form').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const form = e.target;
+          const formStatus = document.getElementById('formStatus');
+        
+          const data = new FormData(form);
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+        
+          if (response.ok) {
+            formStatus.textContent = "Спасибо! Ваше сообщение успешно отправлено.";
+            form.reset();
+          } else {
+            formStatus.textContent = "Ошибка при отправке. Попробуйте позже.";
+          }
+        });
+    </script>
+
 </body>
 </html>
