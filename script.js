@@ -315,12 +315,21 @@ window.addEventListener('click', (e) => {
 });
 
 // Service buttons functionality
+// Service buttons functionality
 document.addEventListener('DOMContentLoaded', function() {
     const serviceButtons = document.querySelectorAll('.service-btn');
     serviceButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const serviceTitle = this.closest('.service-card').querySelector('.service-title').textContent;
-            alert(`Спасибо за интерес к услуге "${serviceTitle}"! Запишитесь на консультацию.`);
+        button.addEventListener('click', function(e) {
+            e.preventDefault(); // Предотвращаем стандартное поведение
+            
+            // Прокручиваем к CRM форме
+            const crmForm = document.querySelector('.crm-form-container');
+            if (crmForm) {
+                crmForm.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
         });
     });
 });
