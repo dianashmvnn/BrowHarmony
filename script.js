@@ -314,13 +314,42 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Service buttons functionality
+// Service buttons functionality - scroll to CRM form with highlight
 document.addEventListener('DOMContentLoaded', function() {
     const serviceButtons = document.querySelectorAll('.service-btn');
     serviceButtons.forEach(button => {
         button.addEventListener('click', function() {
             const serviceTitle = this.closest('.service-card').querySelector('.service-title').textContent;
-            alert(`Спасибо за интерес к услуге "${serviceTitle}"! Для записи свяжитесь с нами по телефону.`);
+            const crmFormSection = document.getElementById('crmFormSection');
+            
+            if (crmFormSection) {
+                // Плавная прокрутка
+                crmFormSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+                
+                // Подсветка формы
+                crmFormSection.style.transition = 'all 0.5s ease';
+                crmFormSection.style.boxShadow = '0 0 0 3px #ff69b4, 0 10px 30px rgba(255,105,180,0.3)';
+                
+                // Убираем подсветку через 3 секунды
+                setTimeout(() => {
+                    crmFormSection.style.boxShadow = '0 4px 15px rgba(0,0,0,0.1)';
+                }, 3000);
+                
+                // Добавляем текст с выбранной услугой в заголовок формы
+                const formTitle = crmFormSection.querySelector('.crm-form-title');
+                if (formTitle) {
+                    const originalText = formTitle.textContent;
+                    formTitle.innerHTML = `Запись на: <span style="color: white;">${serviceTitle}</span>`;
+                    
+                    // Возвращаем оригинальный текст через 5 секунд
+                    setTimeout(() => {
+                        formTitle.textContent = originalText;
+                    }, 5000);
+                }
+            }
         });
     });
 });
