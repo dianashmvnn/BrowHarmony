@@ -320,13 +320,13 @@ document.addEventListener('DOMContentLoaded', function() {
     serviceButtons.forEach(button => {
         button.addEventListener('click', function() {
             const serviceTitle = this.closest('.service-card').querySelector('.service-title').textContent;
-            alert(`Спасибо за интерес к услуге "${serviceTitle}"! Запишитесь на консультацию.`);
+            alert(`Спасибо за интерес к услуге "${serviceTitle}"! Для записи свяжитесь с нами по телефону.`);
         });
     });
 });
 
 // Initialize charts
-function initCharts() 
+function initCharts() {
     // Age chart - only on project page
     const ageChartCanvas = document.getElementById('ageChart');
     if (ageChartCanvas) {
