@@ -102,14 +102,19 @@
         <div class="container">
             <h1 class="page-title">Этапы реализации проекта</h1>
             
+            <!-- Вкладки проекта -->
             <div class="project-tabs">
-                <div class="project-tab active" data-tab="planning">Планирование</div>
+                <!-- Новая вкладка для концепции -->
+                <div class="project-tab active" data-tab="concept">Концепция проекта</div>
+                <!-- Стандартные вкладки -->
+                <div class="project-tab" data-tab="planning">Планирование</div>
                 <div class="project-tab" data-tab="development">Разработка</div>
                 <div class="project-tab" data-tab="testing">Тестирование</div>
-                <div class="project-tab" data-tab="implementation">Внедрение</div>
+                <div class="project-tab" data-tab="implementation">Реализация</div>
             </div>
             
-            <div class="project-content active" id="planningContent">
+            <!-- Контент для вкладки "Концепция проекта" -->
+            <div class="project-content active" id="conceptContent">
                 <div class="info-section">
                     <h2>Тема</h2>
                     <p>Успешный бьюти-бизнес: от концепции до реализации услуг бровиста</p>
@@ -214,6 +219,24 @@
                 </div>
             </div>
             
+            <!-- Контент для вкладки "Планирование" -->
+            <div class="project-content" id="planningContent">
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3 class="step-title">Планирование</h3>
+                        <p>Здесь будет информация о планировании проекта. Вы можете добавить сюда свой контент позже.</p>
+                        <ul>
+                            <li>Срок: [укажите сроки]</li>
+                            <li>Результат: [опишите ожидаемые результаты]</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Контент для вкладки "Разработка" -->
             <div class="project-content" id="developmentContent">
                 <div class="process-steps">
                     <div class="process-step">
@@ -221,15 +244,16 @@
                             <i class="fas fa-code"></i>
                         </div>
                         <h3 class="step-title">Разработка</h3>
-                        <p>Адаптивная верстка, программирование функционала на WordPress, интеграция форм записи и платежной системы, подключение аналитики.</p>
+                        <p>Здесь будет информация о разработке проекта. Вы можете добавить сюда свой контент позже.</p>
                         <ul>
-                            <li>Срок: 30 сентября - 15 ноября 2025</li>
-                            <li>Результат: Функционирующая тестовая версия</li>
+                            <li>Срок: [укажите сроки]</li>
+                            <li>Результат: [опишите ожидаемые результаты]</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
+            <!-- Контент для вкладки "Тестирование" -->
             <div class="project-content" id="testingContent">
                 <div class="process-steps">
                     <div class="process-step">
@@ -237,26 +261,27 @@
                             <i class="fas fa-bug"></i>
                         </div>
                         <h3 class="step-title">Тестирование</h3>
-                        <p>Комплексное тестирование системы: функциональное, кросс-браузерное, адаптивность, нагрузочное. Исправление выявленных ошибок.</p>
+                        <p>Здесь будет информация о тестировании проекта. Вы можете добавить сюда свой контент позже.</p>
                         <ul>
-                            <li>Срок: 18 ноября - 6 декабря 2025</li>
-                            <li>Результат: Протестированный веб-сайт</li>
+                            <li>Срок: [укажите сроки]</li>
+                            <li>Результат: [опишите ожидаемые результаты]</li>
                         </ul>
                     </div>
                 </div>
             </div>
             
+            <!-- Контент для вкладки "Реализация" -->
             <div class="project-content" id="implementationContent">
                 <div class="process-steps">
                     <div class="process-step">
                         <div class="step-icon">
                             <i class="fas fa-rocket"></i>
                         </div>
-                        <h3 class="step-title">Внедрение</h3>
-                        <p>Перенос на боевой хостинг, настройка домена, SSL-сертификата, обучение заказчика, финальная настройка сервисов аналитики.</p>
+                        <h3 class="step-title">Реализация</h3>
+                        <p>Здесь будет информация о реализации проекта. Вы можете добавить сюда свой контент позже.</p>
                         <ul>
-                            <li>Срок: 9-20 декабря 2025</li>
-                            <li>Результат: Рабочий сайт на домене заказчика</li>
+                            <li>Срок: [укажите сроки]</li>
+                            <li>Результат: [опишите ожидаемые результаты]</li>
                         </ul>
                     </div>
                 </div>
@@ -340,6 +365,62 @@
     <!-- Подключение скриптов -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Дополнительный код для управления вкладками (если его нет в script.js)
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('.project-tab');
+            const contents = document.querySelectorAll('.project-content');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const tabId = tab.getAttribute('data-tab');
+                    
+                    // Убираем активный класс у всех вкладок
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+                    
+                    // Добавляем активный класс текущей вкладке
+                    tab.classList.add('active');
+                    document.getElementById(tabId + 'Content').classList.add('active');
+                });
+            });
+            
+            // Инициализация диаграммы (если нужно)
+            if (document.getElementById('ageChart')) {
+                const ctx = document.getElementById('ageChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['18-25 лет', '26-35 лет', '36-45 лет', '45+ лет'],
+                        datasets: [{
+                            label: 'Количество клиентов',
+                            data: [40, 35, 20, 5],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.7)',
+                                'rgba(54, 162, 235, 0.7)',
+                                'rgba(255, 206, 86, 0.7)',
+                                'rgba(75, 192, 192, 0.7)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
     <script src="//code.jivo.ru/widget/punQXglPvk" async></script>
     <script id="amoforms_script_1626934" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1762712699"></script>
 </body>
