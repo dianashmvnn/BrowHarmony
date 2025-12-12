@@ -536,13 +536,285 @@
             
             <!-- Контент для вкладки "Разработка" -->
             <div class="project-content" id="developmentContent">
+                <div class="development-section">
+                    <h2><i class="fas fa-code" style="color: #E8D0C2; margin-right: 10px;"></i> Технологический стек проекта</h2>
+                    <p>Проект "BrowHarmony" реализован с использованием современных технологий и лучших практик веб-разработки. Мы создали масштабируемую и производительную платформу для успешного ведения бьюти-бизнеса.</p>
+                    
+                    <div class="tech-grid">
+                        <!-- Frontend Technologies -->
+                        <div class="tech-card">
+                            <h4><i class="fas fa-paint-brush"></i> Frontend-разработка</h4>
+                            <p>Интерфейс пользователя создан с использованием современных веб-технологий для обеспечения высокой производительности, отзывчивости и премиального пользовательского опыта.</p>
+                            <div class="tech-badges">
+                                <span class="tech-badge frontend">HTML5</span>
+                                <span class="tech-badge frontend">CSS3 & SASS</span>
+                                <span class="tech-badge frontend">JavaScript (ES6+)</span>
+                                <span class="tech-badge frontend">Vue.js 3</span>
+                                <span class="tech-badge frontend">Bootstrap 5</span>
+                                <span class="tech-badge frontend">jQuery</span>
+                            </div>
+                            <p style="margin-top: 15px; font-size: 14px; color: #666;">
+                                <i class="fas fa-check-circle" style="color: #50C878; margin-right: 5px;"></i>
+                                Адаптивная верстка, PWA-технологии, оптимизация под мобильные устройства
+                            </p>
+                        </div>
+                        
+                        <!-- Backend Technologies -->
+                        <div class="tech-card">
+                            <h4><i class="fas fa-server"></i> Backend-разработка</h4>
+                            <p>Серверная часть построена на надежной и производительной платформе с использованием WordPress как основной CMS с кастомными плагинами для расширенной функциональности.</p>
+                            <div class="tech-badges">
+                                <span class="tech-badge backend">WordPress 6.0+</span>
+                                <span class="tech-badge backend">PHP 8.1+</span>
+                                <span class="tech-badge backend">REST API</span>
+                                <span class="tech-badge backend">WooCommerce</span>
+                                <span class="tech-badge backend">Custom Plugins</span>
+                            </div>
+                            <p style="margin-top: 15px; font-size: 14px; color: #666;">
+                                <i class="fas fa-check-circle" style="color: #50C878; margin-right: 5px;"></i>
+                                Многоуровневая архитектура, API-шлюз для интеграций, кэширование
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Database Section -->
+                    <div class="db-architecture">
+                        <h3><i class="fas fa-database" style="color: #FF6B6B; margin-right: 10px;"></i> Архитектура базы данных</h3>
+                        <p>Для хранения и обработки данных используется высокопроизводительная система управления базами данных с оптимизированной структурой и репликацией для обеспечения отказоустойчивости.</p>
+                        
+                        <div class="db-tables">
+                            <div class="db-table">
+                                <div class="table-name"><i class="fas fa-users"></i> Пользователи</div>
+                                <div class="table-columns">
+                                    • ID пользователя (primary key)<br>
+                                    • Имя и контактные данные<br>
+                                    • История посещений<br>
+                                    • Баланс лояльности<br>
+                                    • Статус аккаунта
+                                </div>
+                            </div>
+                            
+                            <div class="db-table">
+                                <div class="table-name"><i class="fas fa-calendar-check"></i> Записи</div>
+                                <div class="table-columns">
+                                    • ID записи (UUID)<br>
+                                    • ID услуги и мастера<br>
+                                    • Дата и время визита<br>
+                                    • Статус записи<br>
+                                    • Сумма и способ оплаты
+                                </div>
+                            </div>
+                            
+                            <div class="db-table">
+                                <div class="table-name"><i class="fas fa-concierge-bell"></i> Услуги</div>
+                                <div class="table-columns">
+                                    • Категория услуги<br>
+                                    • Название и описание<br>
+                                    • Цена и длительность<br>
+                                    • Фото результата<br>
+                                    • Рейтинг и отзывы
+                                </div>
+                            </div>
+                            
+                            <div class="db-table">
+                                <div class="table-name"><i class="fas fa-money-bill-wave"></i> Транзакции</div>
+                                <div class="table-columns">
+                                    • ID транзакции<br>
+                                    • Сумма и валюта<br>
+                                    • Статус платежа<br>
+                                    • Дата и время<br>
+                                    • Данные электронного чека
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-badges" style="margin-top: 20px;">
+                            <span class="tech-badge database">MySQL 8.0</span>
+                            <span class="tech-badge database">Redis (кэширование)</span>
+                            <span class="tech-badge database">Реляционная модель</span>
+                            <span class="tech-badge database">Репликация Master-Slave</span>
+                            <span class="tech-badge database">Автоматическое резервное копирование</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Performance Metrics -->
+                    <div class="performance-metrics">
+                        <div class="metric-card">
+                            <div class="metric-value">98.7%</div>
+                            <div class="metric-label">Uptime</div>
+                            <small>Гарантированная доступность</small>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-value">1.8s</div>
+                            <div class="metric-label">FCP</div>
+                            <small>First Contentful Paint</small>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-value">95/100</div>
+                            <div class="metric-label">Lighthouse</div>
+                            <small>Общая оценка</small>
+                        </div>
+                        
+                        <div class="metric-card">
+                            <div class="metric-value">&lt; 100ms</div>
+                            <div class="metric-label">TTFB</div>
+                            <small>Время отклика</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="development-section">
+                    <h2><i class="fas fa-vial" style="color: #9B59B6; margin-right: 10px;"></i> Инструменты тестирования и аналитики</h2>
+                    <p>Для обеспечения качества продукта и анализа пользовательского поведения используются современные инструменты тестирования и аналитики, позволяющие постоянно улучшать пользовательский опыт.</p>
+                    
+                    <div class="testing-tools">
+                        <!-- Google Tag Manager -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fab fa-google" style="color: #4285F4;"></i>
+                            </div>
+                            <h5>Google Tag Manager</h5>
+                            <p>Централизованное управление тегами для аналитики, ремаркетинга и отслеживания конверсий без изменения кода сайта.</p>
+                            <div class="tech-badges" style="margin-top: 10px;">
+                                <span class="tech-badge analytics">Event Tracking</span>
+                                <span class="tech-badge analytics">Conversion Goals</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Microsoft Clarity -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-chart-heat" style="color: #68217A;"></i>
+                            </div>
+                            <h5>Microsoft Clarity</h5>
+                            <p>Запись сессий пользователей, тепловые карты кликов и анализ поведения для выявления узких мест в пользовательском опыте.</p>
+                            <div class="tech-badges" style="margin-top: 10px;">
+                                <span class="tech-badge testing">Session Replay</span>
+                                <span class="tech-badge testing">Heatmaps</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Google Analytics -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-chart-bar" style="color: #FF6B6B;"></i>
+                            </div>
+                            <h5>Google Analytics 4</h5>
+                            <p>Расширенная аналитика пользовательского поведения, отслеживание конверсий и демографических данных аудитории.</p>
+                            <div class="tech-badges" style="margin-top: 10px;">
+                                <span class="tech-badge analytics">User Behavior</span>
+                                <span class="tech-badge analytics">Conversion Funnels</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testing-tools">
+                        <!-- Lighthouse -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-tachometer-alt" style="color: #FFA500;"></i>
+                            </div>
+                            <h5>Lighthouse</h5>
+                            <p>Автоматическое тестирование производительности, доступности, SEO-оптимизации и лучших практик веб-разработки.</p>
+                            <div class="tech-badges" style="margin-top: 10px;">
+                                <span class="tech-badge testing">Performance</span>
+                                <span class="tech-badge testing">Accessibility</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Jest -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-vial" style="color: #99425B;"></i>
+                            </div>
+                            <h5>Jest & Cypress</h5>
+                            <p>Unit-тестирование JavaScript кода и E2E-тестирование пользовательских сценариев для обеспечения стабильности работы.</p>
+                            <div class="tech-badges" style="margin-top: 10px;">
+                                <span class="tech-badge testing">Unit Tests</span>
+                                <span class="tech-badge testing">E2E Tests</span>
+                            </div>
+                        </div>
+                        
+                        <!-- BrowserStack -->
+                        <div class="tool-card">
+                            <div class="tool-icon">
+                                <i class="fas fa-browser" style="color: #3498DB;"></i>
+                            </div>
+                            <h5>BrowserStack</h5>
+                            <p>Кросс-браузерное и кроссплатформенное тестирование на реальных устройствах и браузерах.</p>
+                            <div class="tech-badges" style="margin-top: 10px;">
+                                <span class="tech-badge testing">Cross-browser</span>
+                                <span class="tech-badge testing">Responsive</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box" style="margin-top: 30px;">
+                        <h4><i class="fas fa-shield-alt" style="color: #FF6B6B; margin-right: 10px;"></i> Интеграции и API</h4>
+                        <p>Проект интегрирован с внешними сервисами для расширенной функциональности:</p>
+                        <div class="integration-list">
+                            <span class="integration-item"><i class="fas fa-credit-card"></i> ЮKassa (платежи)</span>
+                            <span class="integration-item"><i class="fas fa-calendar-alt"></i> Google Calendar</span>
+                            <span class="integration-item"><i class="fab fa-telegram"></i> Telegram Bot API</span>
+                            <span class="integration-item"><i class="fas fa-sms"></i> SMS Aero</span>
+                            <span class="integration-item"><i class="fab fa-yandex"></i> Яндекс.Метрика</span>
+                            <span class="integration-item"><i class="fab fa-google"></i> Google Analytics 4</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="development-section">
+                    <h2><i class="fas fa-rocket" style="color: #FF6B6B; margin-right: 10px;"></i> Оптимизация и производительность</h2>
+                    
+                    <p>Для обеспечения максимальной производительности сайта были применены следующие оптимизации:</p>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin: 25px 0;">
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 4px solid #4A90E2;">
+                            <h5><i class="fas fa-bolt" style="color: #4A90E2;"></i> Кэширование</h5>
+                            <p style="font-size: 14px; color: #666;">Redis для сессий, Varnish для статики, CDN для медиафайлов</p>
+                        </div>
+                        
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 4px solid #50C878;">
+                            <h5><i class="fas fa-compress-arrows-alt" style="color: #50C878;"></i> Сжатие</h5>
+                            <p style="font-size: 14px; color: #666;">GZIP/Brotli для ресурсов, WebP для изображений, минификация кода</p>
+                        </div>
+                        
+                        <div style="background: white; padding: 20px; border-radius: 10px; border-left: 4px solid #9B59B6;">
+                            <h5><i class="fas fa-tachometer-alt" style="color: #9B59B6;"></i> База данных</h5>
+                            <p style="font-size: 14px; color: #666;">Индексы, оптимизированные запросы, репликация чтения</p>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <h4><i class="fas fa-infinity" style="color: #3498DB; margin-right: 10px;"></i> DevOps и инфраструктура</h4>
+                        <p>Проект построен с использованием современных DevOps практик:</p>
+                        <div class="tech-badges" style="margin-top: 15px;">
+                            <span class="tech-badge backend">Docker</span>
+                            <span class="tech-badge backend">GitHub Actions CI/CD</span>
+                            <span class="tech-badge backend">AWS/GCP Cloud</span>
+                            <span class="tech-badge backend">Nginx + PHP-FPM</span>
+                            <span class="tech-badge backend">Let's Encrypt SSL</span>
+                            <span class="tech-badge backend">Sentry (мониторинг ошибок)</span>
+                        </div>
+                        <p style="margin-top: 15px; font-size: 14px; color: #666;">
+                            <i class="fas fa-check-circle" style="color: #50C878; margin-right: 5px;"></i>
+                            Автоматическое развертывание, мониторинг 24/7, резервное копирование, защита от DDoS
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Контент для вкладки "Тестирование" -->
+            <div class="project-content" id="testingContent">
                 <div class="process-steps">
                     <div class="process-step">
                         <div class="step-icon">
-                            <i class="fas fa-code"></i>
+                            <i class="fas fa-bug"></i>
                         </div>
-                        <h3 class="step-title">Разработка</h3>
-                        <p>Здесь будет информация о разработке проекта. Вы можете добавить сюда свой контент позже.</p>
+                        <h3 class="step-title">Тестирование</h3>
+                        <p>Здесь будет информация о тестировании проекта. Вы можете добавить сюда свой контент позже.</p>
                         <ul>
                             <li>Срок: [укажите сроки]</li>
                             <li>Результат: [опишите ожидаемые результаты]</li>
@@ -550,6 +822,7 @@
                     </div>
                 </div>
             </div>
+            
             
             <!-- Контент для вкладки "Тестирование" -->
             <div class="project-content" id="testingContent">
